@@ -31,6 +31,28 @@ interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
 
+export const GenesisLogo = () => {
+  return (
+    <>
+      <Stack direction="row" spacing={2} alignItems="center">
+        <Box component="a" display="block">
+          <Box
+            component="img"
+            alt="test"
+            src="/logo.png"
+            height={{ xs: 45, md: 55, display: "block" }}
+            width="auto"
+          />
+        </Box>
+
+        <Box component="a" display="block">
+          <Typography className="headerLogoText">Genesis Global</Typography>
+        </Box>
+      </Stack>
+    </>
+  );
+};
+
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })<AppBarProps>(({ theme, open }) => ({
@@ -91,23 +113,7 @@ export const Header = () => {
           }}
         >
           <Box sx={{ flex: 1 }}>
-            <Stack direction="row" spacing={2} alignItems="center">
-              <Box component="a" display="block">
-                <Box
-                  component="img"
-                  alt="test"
-                  src="/logo.png"
-                  height={{ xs: 45, md: 55, display: "block" }}
-                  width="auto"
-                />
-              </Box>
-
-              <Box component="a" display="block">
-                <Typography className="headerLogoText">
-                  Genesis Global
-                </Typography>
-              </Box>
-            </Stack>
+            <GenesisLogo />
           </Box>
 
           <Stack

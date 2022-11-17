@@ -1,3 +1,7 @@
 .headerText {
   font-family: "Trajan Pro", sans-serif !important;
 }
+
+html {
+  scroll-behavior: smooth !important;
+}

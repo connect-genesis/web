@@ -4,6 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Logos } from "../components/Logos";
 import { About } from "../components/About";
 import { OurVision } from "../components/Vision";
+import { HelpBanner } from "../components/HelpBanner";
 import "../styles/home.css";
 
 export const HomePage = () => {
@@ -70,6 +71,8 @@ export const HomePage = () => {
       <About />
 
       <OurVision />
+
+      <HelpBanner />
     </>
   );
 };
