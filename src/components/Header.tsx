@@ -135,7 +135,6 @@ export const Header = () => {
             <MenuIcon
               onClick={handleDrawerOpen}
               sx={{
-                fontSize: 30,
                 display: { xs: "flex", md: "none" },
                 color: "white",
               }}

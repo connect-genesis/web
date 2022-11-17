@@ -16,24 +16,37 @@ export const InformationCard = ({
   title,
   image,
   description,
+  price,
 }: {
   tag: string;
   title: string;
   image: string;
   description: string;
+  price: string;
 }) => {
   return (
     <>
       <Box className="information_card">
-        <Typography variant="body1" gutterBottom className="category_text">
+        <Typography
+          variant="body1"
+          gutterBottom
+          style={{
+            fontWeight: 600,
+            color: "#6C38FF",
+            letterSpacing: "2px",
+          }}
+        >
           {tag}
         </Typography>
 
         <Typography
           variant="body1"
           gutterBottom
-          className="title"
           sx={{ mt: 5 }}
+          style={{
+            fontWeight: "bolder",
+            letterSpacing: "2px",
+          }}
         >
           {title}
         </Typography>
@@ -49,13 +62,19 @@ export const InformationCard = ({
           src={image}
         ></Box>
 
+        <Typography variant="body1" gutterBottom sx={{ mt: 7 }}>
+          {description}
+        </Typography>
+
         <Typography
           variant="body1"
-          gutterBottom
-          className="text"
           sx={{ mt: 7 }}
+          style={{
+            color: "#868585",
+            fontWeight: "bolder",
+          }}
         >
-          {description}
+          Starting at ${price}
         </Typography>
 
         <ColorButton

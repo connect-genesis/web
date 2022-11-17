@@ -1,43 +1,33 @@
 .information_card {
-  background: linear-gradient(180.04deg, #e7ecff 27.72%, #fcfdff 144.73%);
+  /*background: linear-gradient(180.04deg, #e7ecff 27.72%, #fcfdff 144.73%); */
+  background: #f8f9ff;
+  filter: drop-shadow(0px 1px 4px rgba(139, 139, 139, 0.25));
   border-radius: 10px;
   min-height: 500px;
   padding: 30px;
 }
 
 .information_card .category_text {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
   line-height: 19px;
   letter-spacing: 3px;
-
   color: #6c38ff;
 }
 
 .information_card .title {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 23px;
   letter-spacing: 3px;
   color: #333333;
   margin: 0;
 }
 
 .information_card .text {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 19px;
-
   color: #474747;
 }
 
 .information_card .image_box {
   border-radius: 10px;
   height: "auto";
+}
+
+.price_text {
 }

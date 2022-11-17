@@ -3,7 +3,6 @@ import {
   Theme,
   CircularProgress,
   ThemeProvider as ThemeProviderMui,
-  createTheme,
 } from "@mui/material";
 import Values from "values.js";
 import React, { useEffect, useState } from "react";

@@ -1,15 +1,7 @@
-import {
-  AppBar,
-  Button,
-  Typography,
-  Stack,
-  Toolbar,
-  useScrollTrigger,
-} from "@mui/material";
-import React, { useEffect } from "react";
+import { CssBaseline, Toolbar, useScrollTrigger } from "@mui/material";
+import React from "react";
 import ThemeProvider from "../providers/themeProvider";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { createTheme, useTheme } from "@mui/material/styles";
 import "./layout.css";
 import { Header } from "../components/Header";
 
@@ -36,6 +28,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <ThemeProvider>
+      <CssBaseline />
       <Header />
       <Toolbar sx={{ mb: 10 }} />
 

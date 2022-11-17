@@ -97,18 +97,17 @@ const themeFactory = ({
       tertiary: colors.tertiary,
       text: {
         primary: "#333333",
-        secondary: "#BBBAC2",
+        secondary: "#474747",
       },
       background: {
-        default: "#FAFAFC",
-        paper: "#FFFFFF",
+        default: "#FFFFF",
+        paper: "#868585",
       },
       success: {
         main: "#3ecc96",
       },
       error: {
         main: "#FF3941",
-        dark: "#FE4951",
       },
       info: {
         main: "#22B8E8",
@@ -121,9 +120,9 @@ const themeFactory = ({
     typography: {
       fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif`,
       h1: {
-        fontSize: "40px",
-        lineHeight: "130.69%",
-        fontWeight: 900,
+        fontSize: "54px",
+        lineHeight: "64px",
+        fontWeight: "bold",
       },
       h2: {
         fontSize: "40px",
@@ -161,7 +160,7 @@ const themeFactory = ({
         fontWeight: "medium",
       },
       body1: {
-        fontSize: "16px",
+        fontSize: "18px",
         lineHeight: "24px",
       },
       body2: {
@@ -169,6 +168,9 @@ const themeFactory = ({
         lineHeight: "17px",
       },
       button: {
+        fontSize: "16px",
+        lineHeight: "19px",
+        fontWeight: "600",
         textTransform: "none",
       },
     },
@@ -283,28 +285,6 @@ const themeFactory = ({
       MuiOutlinedInput: {},
       MuiCheckbox: {},
       MuiFormLabel: {},
-      MuiAccordion: {
-        defaultProps: {
-          elevation: 0,
-        },
-        styleOverrides: {
-          root: {
-            margin: 0,
-            padding: 0,
-            transition: "Mui-expanded 1.5s ease",
-            backgroundColor: "#050314",
-            "&:(:last-child)": {
-              borderBottom: 0,
-            },
-            "&:not(:last-child)": {
-              borderBottom: `1px solid rgba(187, 186, 194, 0.3)`,
-            },
-            "&:before": {
-              display: "none",
-            },
-          },
-        },
-      },
       MuiAccordionDetails: {
         styleOverrides: {
           root: {
