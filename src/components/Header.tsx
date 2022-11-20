@@ -24,6 +24,7 @@ import { useState } from "react";
 import Menubar from "./Menu";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
+import { useScheduleOpenStore } from "../store/createScheduleAppoinmentStore";
 
 const drawerWidth = 240;
 
@@ -79,6 +80,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export const Header = () => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const { setIsOpen } = useScheduleOpenStore();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -131,7 +133,12 @@ export const Header = () => {
                   width: "100%",
                 }}
               >
-                <Button fullWidth variant="contained" size="small">
+                <Button
+                  fullWidth
+                  variant="contained"
+                  size="small"
+                  onClick={() => setIsOpen(true)}
+                >
                   Schedule an appointment
                 </Button>
               </div>

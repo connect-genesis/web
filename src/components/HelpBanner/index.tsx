@@ -1,7 +1,10 @@
 import { Box, Typography, Button } from "@mui/material";
+import { useScheduleOpenStore } from "../../store/createScheduleAppoinmentStore";
 import "./style.css";
 
 export const HelpBanner = () => {
+  const { setIsOpen } = useScheduleOpenStore();
+
   return (
     <>
       <Box
@@ -19,7 +22,12 @@ export const HelpBanner = () => {
             Talk to our experts today.
           </Typography>
 
-          <Button variant="contained" size="small" sx={{ mt: 7 }}>
+          <Button
+            variant="contained"
+            size="small"
+            sx={{ mt: 7 }}
+            onClick={() => setIsOpen(true)}
+          >
             Schedule an appointment
           </Button>
         </div>

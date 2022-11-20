@@ -101,7 +101,6 @@ const themeFactory = ({
       },
       background: {
         default: "#FFFFF",
-        paper: "#868585",
       },
       success: {
         main: "#3ecc96",
@@ -160,7 +159,7 @@ const themeFactory = ({
         fontWeight: "medium",
       },
       body1: {
-        fontSize: "18px",
+        fontSize: "16px",
         lineHeight: "24px",
       },
       body2: {
@@ -376,19 +375,23 @@ const themeFactory = ({
       styleOverrides: {
         root: {
           height: "48px",
-          backgroundColor: theme.palette.primary.A400,
-          color: theme.palette.tertiary?.A100,
+          backgroundColor: "#0000",
+          color: "black",
           borderRadius: "6px",
           ".MuiOutlinedInput-input": {
             // height: "15px",
             "&::placeholder": {
-              color: colors.tertiary.A100,
+              color: "#0000",
               opacity: 1,
             },
           },
+
+          "&::placeholder": {
+            color: "#868585",
+          },
+
           ".MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.primary.A100,
-            borderRadius: "6px",
+            borderColor: "#DBDBDB",
           },
           ".MuiInputBase-inputSizeSmall": {
             height: "27px !important",
