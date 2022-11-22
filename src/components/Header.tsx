@@ -97,10 +97,9 @@ export const Header = () => {
         sx={{
           height: {
             xs: "70px",
-            md: "90px",
+            md: "80px",
           },
           padding: {
-            xs: 5,
             md: 15,
           },
           borderRadius: 0,
@@ -109,10 +108,12 @@ export const Header = () => {
       >
         <Container
           sx={{
+            width: "100%",
             height: "100%",
             display: "flex",
             alignItems: "center",
           }}
+          maxWidth="xl"
         >
           <Box sx={{ flex: 1 }}>
             <GenesisLogo />

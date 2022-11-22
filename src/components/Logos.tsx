@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 export const Logos = () => {
   return (
     <>
-      <Container sx={{ mt: 15 }}>
+      <Container sx={{ mt: 15 }} maxWidth="xl">
         <div className="slider">
           <div className="slide-track">
             {[...new Array(3)].map((i) => (

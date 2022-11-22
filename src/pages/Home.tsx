@@ -31,10 +31,11 @@ export const HomePage = () => {
           gutterBottom
           style={{
             fontWeight: 900,
+            fontSize: matches ? 90 : 50,
             color: "white",
             padding: 10,
             paddingTop: matches ? 150 : 100,
-            lineHeight: "80px",
+            lineHeight: matches ? "100px" : "60px",
           }}
         >
           The key to our success is <br />{" "}
