@@ -37,7 +37,7 @@ export const HomePage = () => {
             paddingTop: matches ? 150 : 100,
           }}
         >
-          The key to our success is <br />{" "}
+          The key to our success is <br />
           <span className="gradient_text"> Quality </span>
         </Typography>
 

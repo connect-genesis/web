@@ -119,8 +119,6 @@ const themeFactory = ({
     typography: {
       fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif`,
       h1: {
-        fontSize: "54px",
-        lineHeight: "64px",
         fontWeight: "bold",
       },
       h2: {
