@@ -100,7 +100,7 @@ export const Header = () => {
             md: "80px",
           },
           padding: {
-            md: 15,
+            md: 10,
           },
           borderRadius: 0,
         }}

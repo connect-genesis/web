@@ -30,12 +30,11 @@ export const HomePage = () => {
           variant="h1"
           gutterBottom
           style={{
-            fontWeight: 900,
-            fontSize: matches ? 90 : 50,
+            fontWeight: 800,
+            // fontSize: matches ? 80 : 50,
             color: "white",
             padding: 10,
             paddingTop: matches ? 150 : 100,
-            lineHeight: matches ? "100px" : "60px",
           }}
         >
           The key to our success is <br />{" "}
@@ -43,7 +42,7 @@ export const HomePage = () => {
         </Typography>
 
         <Typography
-          variant="body1"
+          variant="h5"
           gutterBottom
           style={{
             color: "white",

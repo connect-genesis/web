@@ -4,10 +4,10 @@ import "./about.css";
 export const About = () => {
   return (
     <>
-      <Container sx={{ mt: 20 }} maxWidth="xl">
+      <Container sx={{ p: 20, mt: 5 }}>
         <Typography variant="h2">About Genesis Global</Typography>
 
-        <Typography sx={{ mt: 5, fontWeight: "bold" }} variant="h4">
+        <Typography sx={{ mt: 5, fontWeight: "bold" }} variant="h5">
           We work with the best in the business with 100+ marketers, developers,
           and strategists helping achieve client goals.
         </Typography>
