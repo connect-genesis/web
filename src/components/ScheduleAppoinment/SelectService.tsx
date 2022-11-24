@@ -11,7 +11,7 @@ import { CustomSeconaryButton } from "./Button";
 import { ScheduleAppoinmentDetails } from "./ScheduleInformation";
 import { useScheduleDetailsStore } from "../../store/createScheduleDetailsStore";
 
-export const GetContactInformation = (props: {
+export const SelectService = (props: {
   disabled: boolean;
   handleBack: () => void;
   handleNext: () => void;
@@ -59,62 +59,60 @@ export const GetContactInformation = (props: {
                     justifyContent: "flex-start",
                   }}
                 >
-                  Enter your contact info
+                  Select a service
                 </Typography>
 
-                <TextField
-                  color="secondary"
-                  style={{ marginTop: 30 }}
-                  fullWidth
-                  label="First name"
-                  size="small"
-                  value={store.firstName}
-                  onChange={(e) => store.setFirstName(e.target.value)}
-                  variant="outlined"
-                />
-                <TextField
-                  color="secondary"
-                  style={{ marginTop: 30 }}
-                  size="small"
-                  fullWidth
-                  value={store.lastName}
-                  onChange={(e) => store.setLastName(e.target.value)}
-                  label="Last name"
-                  variant="outlined"
-                />
+                <Box
+                  sx={{
+                    width: "100%",
+                    textAlign: "left",
+                    p: 5,
+                    border: "1px solid #DBDBDB",
+                    borderRadius: 2,
+                  }}
+                  style={{ marginTop: 20 }}
+                >
+                  <Typography> Photography 365 total solutions </Typography>
+                </Box>
 
-                <TextField
-                  color="secondary"
-                  style={{ marginTop: 30 }}
-                  fullWidth
-                  size="small"
-                  label="Email address"
-                  variant="outlined"
-                  value={store.email}
-                  onChange={(e) => store.setEmail(e.target.value)}
-                />
+                <Box
+                  sx={{
+                    width: "100%",
+                    textAlign: "left",
+                    p: 5,
+                    border: "1px solid #DBDBDB",
+                    borderRadius: 2,
+                  }}
+                  style={{ marginTop: 20 }}
+                >
+                  <Typography>BPM</Typography>
+                </Box>
 
-                <TextField
-                  color="secondary"
-                  style={{ marginTop: 30 }}
-                  fullWidth
-                  size="small"
-                  label="Phone number"
-                  variant="outlined"
-                  value={store.phone}
-                  onChange={(e) => store.setPhone(e.target.value)}
-                />
+                <Box
+                  sx={{
+                    width: "100%",
+                    textAlign: "left",
+                    p: 5,
+                    border: "1px solid #DBDBDB",
+                    borderRadius: 2,
+                  }}
+                  style={{ marginTop: 20 }}
+                >
+                  <Typography>Web designing and maintainence</Typography>
+                </Box>
 
-                <TextField
-                  color="secondary"
-                  multiline
-                  style={{ marginTop: 30 }}
-                  fullWidth
-                  label="Additional comments..."
-                  value={store.details}
-                  rows={4}
-                  onChange={(e) => store.setDetails(e.target.value)}
-                />
+                <Box
+                  sx={{
+                    width: "100%",
+                    textAlign: "left",
+                    p: 5,
+                    border: "1px solid #DBDBDB",
+                    borderRadius: 2,
+                  }}
+                  style={{ marginTop: 20 }}
+                >
+                  <Typography>Content writing</Typography>
+                </Box>
 
                 <CustomSeconaryButton
                   onClick={props.handleNext}

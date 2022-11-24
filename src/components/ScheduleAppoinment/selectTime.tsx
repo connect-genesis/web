@@ -6,6 +6,7 @@ import {
   Grid,
   useMediaQuery,
   useTheme,
+  Button,
 } from "@mui/material";
 import { Dayjs } from "dayjs";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -17,6 +18,8 @@ import { CustomSeconaryButton } from "./Button";
 import { ScheduleAppoinmentDetails } from "./ScheduleInformation";
 import { useState } from "react";
 import { useScheduleDetailsStore } from "../../store/createScheduleDetailsStore";
+
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 export const SelectTime = (props: {
   disabled: boolean;
@@ -147,13 +150,31 @@ export const SelectTime = (props: {
                   </LocalizationProvider>
                 </Stack>
 
-                <CustomSeconaryButton
-                  onClick={handleNextClick}
-                  style={{ marginTop: 40, float: "right" }}
-                  sx={{ pl: 10, pr: 10 }}
-                >
-                  {props.activeStep === length - 1 ? "Finish" : "Next"}
-                </CustomSeconaryButton>
+                <Stack direction="row" spacing={2}>
+                  <Button
+                    variant="outlined"
+                    onClick={props.handleBack}
+                    size="small"
+                    style={{
+                      marginTop: 40,
+                      float: "right",
+                      color: "#6C38FF",
+                      borderColor: "#6C38FF",
+                    }}
+                    startIcon={<KeyboardBackspaceIcon />}
+                  >
+                    {props.activeStep === length - 1 ? "Finish" : "Back"}
+                  </Button>
+
+                  <CustomSeconaryButton
+                    size="small"
+                    onClick={handleNextClick}
+                    style={{ marginTop: 40, float: "right" }}
+                    sx={{ pl: 10, pr: 10 }}
+                  >
+                    {props.activeStep === length - 1 ? "Finish" : "Next"}
+                  </CustomSeconaryButton>
+                </Stack>
               </Stack>
             </Box>
           </Grid>

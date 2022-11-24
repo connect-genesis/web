@@ -1,3 +1,3 @@
 export const AppConfig = {
-  BACKEND_URL: "http://localhost:3000/",
+  BACKEND_URL: "https://mail-service-iota.vercel.app/",
 };

@@ -6,9 +6,11 @@ import { StartSchedule } from "./start";
 import { CompleteSchedule } from "./complete";
 import { GetContactInformation } from "./contactInfo";
 import { SelectTime } from "./selectTime";
+import { SelectService } from "./SelectService";
 
 const steps = [
   "Schedule an Apponment",
+  "Select a service",
   "Enter your contact information",
   "Choose date + time",
 ];
@@ -59,6 +61,17 @@ export const ScheduleApponment = () => {
         );
       case 1:
         return (
+          <SelectService
+            disabled={activeStep === 0}
+            handleBack={handleBack}
+            handleNext={handleNext}
+            activeStep={activeStep}
+            length={steps.length}
+          />
+        );
+
+      case 2:
+        return (
           <GetContactInformation
             disabled={activeStep === 0}
             handleBack={handleBack}
@@ -67,7 +80,7 @@ export const ScheduleApponment = () => {
             length={steps.length}
           />
         );
-      case 2:
+      case 3:
         return (
           <SelectTime
             disabled={activeStep === 0}

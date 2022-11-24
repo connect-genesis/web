@@ -61,18 +61,6 @@ export const OurVision = () => {
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 1, sm: 1, md: 2 }}
           >
-            {Array.from(Array(2)).map((_, index) => (
-              <>
-                <Grid item xs={1} sm={1} md={1} sx={{ p: 5, mb: 5 }}>
-                  <InformationCard
-                    tag="BPM"
-                    title="Develop your website from scratch"
-                    description="Our IT arm will develop your website from scratch with 
-modern and simple custom builds"
-                    image="https://get.pxhere.com/photo/laptop-notebook-computer-macbook-mac-work-screen-apple-keyboard-ipad-technology-web-tablet-office-gadget-business-brand-imac-design-multimedia-personal-computer-electronic-device-computer-hardware-personal-computer-hardware-758989.jpg"
-                    price={"200"}
-                  />
-                </Grid>
 
                 <Grid item xs={1} sm={1} md={1} sx={{ p: 5, mb: 5 }}>
                   <InformationCard
@@ -81,12 +69,44 @@ modern and simple custom builds"
                     description="Photography 365 total solution is the first and only 
 hybrid solution product for professional photographers 
 and studio owners across the globe"
-                    image="https://get.pxhere.com/photo/macbook-hand-camera-photography-dslr-holding-product-reflex-camera-single-lens-reflex-camera-cameras-optics-1393330.jpg"
+                    image="/other/photo.jpeg"
                     price={"200"}
                   />
                 </Grid>
-              </>
-            ))}
+
+                <Grid item xs={1} sm={1} md={1} sx={{ p: 5, mb: 5 }}>
+                  <InformationCard
+                    tag="BPM"
+                    title="Provide hybrid solution with automations"
+                    description="Provide hybrid solution with automations and system 
+improvements while handling the back office."
+                    image="/other/bpm.jpg"
+                    price={"200"}
+                  />
+                </Grid>
+
+
+                <Grid item xs={1} sm={1} md={1} sx={{ p: 5, mb: 5 }}>
+                  <InformationCard
+                    tag="Web designing and Maintainence"
+                    title="Develop your website from scratch"
+                    description="Our IT arm will develop your website from scratch with 
+modern and simple custom builds"
+                    image="/other/dev.jpg"
+                    price={"200"}
+                  />
+                </Grid>
+
+                <Grid item xs={1} sm={1} md={1} sx={{ p: 5, mb: 5 }}>
+                  <InformationCard
+                    tag="Content writing"
+                    title="Develop your website from scratch"
+                    description="we currently handle web content development, content 
+modification and also article content."
+                    image="/other/content-writing.jpeg"
+                    price={"200"}
+                  />
+                </Grid>
           </Grid>
         </Box>
       </Container>

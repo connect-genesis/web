@@ -372,12 +372,11 @@ const themeFactory = ({
       ...theme.components?.MuiOutlinedInput,
       styleOverrides: {
         root: {
-          height: "48px",
+          minHeight: "48px",
           backgroundColor: "#0000",
           color: "black",
           borderRadius: "6px",
           ".MuiOutlinedInput-input": {
-            // height: "15px",
             "&::placeholder": {
               color: "#0000",
               opacity: 1,
@@ -388,15 +387,6 @@ const themeFactory = ({
             color: "#868585",
           },
 
-          ".MuiOutlinedInput-notchedOutline": {
-            borderColor: "#DBDBDB",
-          },
-          ".MuiInputBase-inputSizeSmall": {
-            height: "27px !important",
-            "&::placeholder": {
-              fontSize: "14px",
-            },
-          },
           ".Mui-focused": {
             borderWidth: "1px",
           },
@@ -410,6 +400,8 @@ const themeFactory = ({
       },
     };
   }
+
+  
 
   if (theme?.components?.MuiPagination) {
     theme.components.MuiPagination = {
