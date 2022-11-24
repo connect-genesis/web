@@ -4,7 +4,7 @@ import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 export const ScheduleAppoinmentDetails = () => {
   return (
     <>
-      <Grid item xs={1} sm={4} md={2}>
+      <Grid item xs={1} sm={4} md={3}>
         <Box
           style={{
             width: "100%",

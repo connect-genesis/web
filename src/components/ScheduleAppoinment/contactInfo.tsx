@@ -33,9 +33,9 @@ export const GetContactInformation = (props: {
         <Grid
           container
           spacing={{ xs: 1, md: 3 }}
-          columns={{ xs: 1, sm: 8, md: 5 }}
+          columns={{ xs: 1, sm: 8, md: 7 }}
         >
-          <Grid item xs={1} sm={4} md={3}>
+          <Grid item xs={1} sm={4} md={4}>
             <Box
               style={{ width: "100%" }}
               sx={{

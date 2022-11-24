@@ -69,9 +69,9 @@ export const SelectTime = (props: {
         <Grid
           container
           spacing={{ xs: 1, md: 3 }}
-          columns={{ xs: 1, sm: 8, md: 5 }}
+          columns={{ xs: 1, sm: 8, md: 7 }}
         >
-          <Grid item xs={1} sm={4} md={3}>
+          <Grid item xs={1} sm={4} md={4}>
             <Box
               style={{ width: "100%" }}
               sx={{
@@ -156,7 +156,7 @@ export const SelectTime = (props: {
                     onClick={props.handleBack}
                     size="small"
                     style={{
-                      marginTop: 40,
+                      marginTop: 130,
                       float: "right",
                       color: "#6C38FF",
                       borderColor: "#6C38FF",
@@ -169,7 +169,7 @@ export const SelectTime = (props: {
                   <CustomSeconaryButton
                     size="small"
                     onClick={handleNextClick}
-                    style={{ marginTop: 40, float: "right" }}
+                    style={{ marginTop: 130, float: "right" }}
                     sx={{ pl: 10, pr: 10 }}
                   >
                     {props.activeStep === length - 1 ? "Finish" : "Next"}

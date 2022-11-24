@@ -33,9 +33,9 @@ export const SelectService = (props: {
         <Grid
           container
           spacing={{ xs: 1, md: 3 }}
-          columns={{ xs: 1, sm: 8, md: 5 }}
+          columns={{ xs: 1, sm: 8, md: 7 }}
         >
-          <Grid item xs={1} sm={4} md={3}>
+          <Grid item xs={1} sm={4} md={4}>
             <Box
               style={{ width: "100%" }}
               sx={{
@@ -116,7 +116,7 @@ export const SelectService = (props: {
 
                 <CustomSeconaryButton
                   onClick={props.handleNext}
-                  style={{ marginTop: 40, float: "right" }}
+                  style={{ marginTop: 150, float: "right" }}
                   sx={{ pl: 10, pr: 10 }}
                   size="small"
                 >

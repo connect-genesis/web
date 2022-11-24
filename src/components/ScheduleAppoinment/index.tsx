@@ -100,7 +100,7 @@ export const ScheduleApponment = () => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: matches ? "60%" : "90%",
+    width: matches ? "80%" : "90%",
     bgcolor: "white",
     borderRadius: "20px",
     boxShadow: 24,
