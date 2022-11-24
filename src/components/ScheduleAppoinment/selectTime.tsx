@@ -4,7 +4,6 @@ import {
   Box,
   Stack,
   Grid,
-  Button,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -17,6 +16,7 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { CustomSeconaryButton } from "./Button";
 import { ScheduleAppoinmentDetails } from "./ScheduleInformation";
 import { useState } from "react";
+import { useScheduleDetailsStore } from "../../store/createScheduleDetailsStore";
 
 export const SelectTime = (props: {
   disabled: boolean;
@@ -31,6 +31,29 @@ export const SelectTime = (props: {
   const [startTime, setStartTime] = useState<Dayjs | null>(null);
   const [endTime, setEndTime] = useState<Dayjs | null>(null);
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
+  const store = useScheduleDetailsStore();
+
+  const handleNextClick = () => {
+    if (startTime && endTime) {
+      store.setStartTime(
+        value
+          ?.hour(startTime.hour())
+          .minute(startTime.minute())
+          .toDate()
+          .toISOString()!
+      );
+      store.setEndTime(
+        value
+          ?.hour(startTime.hour())
+          .minute(startTime.minute())
+          .toDate()
+          .toISOString()!
+      );
+      store.setDate(value?.format("YYYY-MM-DD")!);
+    }
+    props.handleNext();
+  };
 
   return (
     <>
@@ -125,7 +148,7 @@ export const SelectTime = (props: {
                 </Stack>
 
                 <CustomSeconaryButton
-                  onClick={props.handleNext}
+                  onClick={handleNextClick}
                   style={{ marginTop: 40, float: "right" }}
                   sx={{ pl: 10, pr: 10 }}
                 >

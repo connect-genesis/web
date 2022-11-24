@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { CustomSeconaryButton } from "./Button";
 import { ScheduleAppoinmentDetails } from "./ScheduleInformation";
+import { useScheduleDetailsStore } from "../../store/createScheduleDetailsStore";
 
 export const GetContactInformation = (props: {
   disabled: boolean;
@@ -19,6 +20,7 @@ export const GetContactInformation = (props: {
 }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const store = useScheduleDetailsStore();
 
   return (
     <>
@@ -66,6 +68,8 @@ export const GetContactInformation = (props: {
                   fullWidth
                   label="First name"
                   size="small"
+                  value={store.firstName}
+                  onChange={(e) => store.setFirstName(e.target.value)}
                   variant="outlined"
                 />
                 <TextField
@@ -73,6 +77,8 @@ export const GetContactInformation = (props: {
                   style={{ marginTop: 30 }}
                   size="small"
                   fullWidth
+                  value={store.lastName}
+                  onChange={(e) => store.setLastName(e.target.value)}
                   label="Last name"
                   variant="outlined"
                 />
@@ -84,6 +90,8 @@ export const GetContactInformation = (props: {
                   size="small"
                   label="Email address"
                   variant="outlined"
+                  value={store.email}
+                  onChange={(e) => store.setEmail(e.target.value)}
                 />
 
                 <TextField
@@ -93,6 +101,8 @@ export const GetContactInformation = (props: {
                   size="small"
                   label="Phone number"
                   variant="outlined"
+                  value={store.phone}
+                  onChange={(e) => store.setPhone(e.target.value)}
                 />
 
                 <TextField
@@ -104,6 +114,8 @@ export const GetContactInformation = (props: {
                   fullWidth
                   label="Additional comments..."
                   variant="outlined"
+                  value={store.details}
+                  onChange={(e) => store.setDetails(e.target.value)}
                 />
 
                 <CustomSeconaryButton
