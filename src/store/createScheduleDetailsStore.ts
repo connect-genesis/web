@@ -10,6 +10,7 @@ interface ScheduleDetailsStore {
   date: string;
   startTime: string;
   endTime: string;
+  isSubmitted: boolean;
 
   setFirstName: (firstName: string) => void;
   setLastName: (lastName: string) => void;
@@ -19,6 +20,7 @@ interface ScheduleDetailsStore {
   setStartTime: (st: string) => void;
   setEndTime: (et: string) => void;
   setDate: (d: string) => void;
+  setIsSubmitted: (is: boolean) => void;
   deleteEverything: () => void;
 }
 
@@ -33,6 +35,7 @@ export const useScheduleDetailsStore = create<ScheduleDetailsStore>()(
       date: "",
       startTime: "",
       endTime: "",
+      isSubmitted: false,
 
       setFirstName: (firstName: string) =>
         set(() => ({ firstName: firstName })),
@@ -44,7 +47,7 @@ export const useScheduleDetailsStore = create<ScheduleDetailsStore>()(
       setStartTime: (st: string) => set(() => ({ startTime: st })),
       setEndTime: (et: string) => set(() => ({ endTime: et })),
       setDate: (d: string) => set(() => ({ date: d })),
-
+      setIsSubmitted: (s: boolean) => set(() => ({ isSubmitted: s })),
       deleteEverything: () => set({}, true),
     }))
   )
