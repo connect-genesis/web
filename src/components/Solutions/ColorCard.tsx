@@ -18,6 +18,8 @@ export const ColorCard = (props: {
         pt: { xs: 0, md: 20 },
         pb: { xs: 0, md: 20 },
         background: "#F8F9FF",
+        borderRadius: 2,
+        boxShadow: 1,
       }}
     >
       <Container maxWidth="xl">
@@ -67,8 +69,18 @@ export const ColorCard = (props: {
             </Box>
           </Grid>
 
-          <Grid item xs={2} sm={4} md={4}>
-            <img src={props.data.img}  style={{height:300}}/>
+          <Grid
+            xs={2}
+            sm={4}
+            md={4}
+            alignContent="flex-start"
+            alignItems="flex-start"
+            width={"100%"}
+          >
+            <img
+              src={props.data.img}
+              style={{ height: 300, marginLeft: "auto", marginRight: "auto" }}
+            />
           </Grid>
         </Grid>
       </Container>

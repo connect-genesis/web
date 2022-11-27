@@ -8,7 +8,7 @@ export const NormalCard = (props: {
     description: string;
     price: string;
     isColor: boolean;
-    img: string
+    img: string;
   };
 }) => {
   return (
@@ -25,8 +25,8 @@ export const NormalCard = (props: {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 2, sm: 8, md: 12 }}
         >
-          <Grid item xs={2} sm={4} md={4}>
-            <img src={props.data.img}  style={{height:300}}/>
+          <Grid item xs={2} sm={4} md={4} style={{ justifyContent: "center" }}>
+            <img src={props.data.img} style={{ height: 300 }} />
           </Grid>
 
           <Grid item xs={2} sm={4} md={8}>
