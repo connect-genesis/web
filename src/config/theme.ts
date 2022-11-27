@@ -401,8 +401,6 @@ const themeFactory = ({
     };
   }
 
-  
-
   if (theme?.components?.MuiPagination) {
     theme.components.MuiPagination = {
       ...theme.components?.MuiPagination,

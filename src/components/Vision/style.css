@@ -5,9 +5,5 @@
 }
 
 .vision_description_box {
-  background: linear-gradient(
-    180.04deg,
-    #f8f9ff 27.72%,
-    #f8f9ff 144.73%
-  ) !important;
+  background: #e8ebff;
 }

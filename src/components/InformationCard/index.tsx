@@ -26,7 +26,7 @@ export const InformationCard = ({
 }) => {
   return (
     <>
-      <Box className="information_card" >
+      <Box className="information_card">
         <Typography
           variant="body1"
           gutterBottom
@@ -58,7 +58,7 @@ export const InformationCard = ({
           style={{
             background: "#fffefe",
             width: "100%",
-            maxHeight:300,
+            maxHeight: 300,
           }}
           src={image}
         ></Box>
@@ -67,7 +67,7 @@ export const InformationCard = ({
           {description}
         </Typography>
 
-{/*
+        {/*
  * 
         <Typography
           variant="body1"
