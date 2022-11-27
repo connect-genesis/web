@@ -115,7 +115,7 @@ export const Header = () => {
           }}
           maxWidth="xl"
         >
-          <Box sx={{ flex: 1 }}>
+          <Box sx={{ flex: 1 }} component={Link} to="/">
             <GenesisLogo />
           </Box>
 
