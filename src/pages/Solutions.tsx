@@ -17,7 +17,7 @@ const solutions = [
     name: "BPM",
     tag: "Provide hybrid solution with automations",
     description:
-      "Genesis is not ordinary, we do not take a process as is from our clients. The main aim of our BPM offerings is to provide hybrid solution with automations and system improvements while handling the back office. Our team is specialized in AP, AR, Invoicing, General Ledger, Virtual PA, Secretarial services and project management solutions. ",
+      "Genesis is not ordinary, we do not take a process as is from our clients. The main aim of our BPM offerings is to provide hybrid solution with automations and system improvements while handling the back office. Our team is specialized in AP, AR, Invoicing, General Ledger, Virtual PA, Secretarial services and project management solutions.",
     price: "Starting at $250.00",
     isColor: false,
     img: "/solutions/editing.gif",
@@ -30,6 +30,15 @@ const solutions = [
     price: "Starting at $250.00",
     isColor: true,
     img: "/solutions/webdevl.gif",
+  },
+  {
+    name: "Content writing",
+    tag: "Develop your website from scratch",
+    description:
+      "we currently handle web content development, content modification and also article content.",
+    price: "Starting at $250.00",
+    isColor: false,
+    img: "/solutions/bussiness.gif",
   },
 ];
 
