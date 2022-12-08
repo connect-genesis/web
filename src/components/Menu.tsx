@@ -79,24 +79,20 @@ const Menubar: React.FC = () => {
                   style={{ cursor: "pointer" }}
                   to="/solutions#content-writing"
                 >
-                  Content writing
+                  Photography 365 <br /> solutions
                 </Typography>
                 <Typography sx={{ p: 1, color: "white" }}>
-                  Web designing
-                </Typography>
-                <Typography sx={{ p: 1, color: "white" }}>
-                  Exclusive photography <br />
-                  backend
+                  BPM services
                 </Typography>
               </Stack>
             </Box>
 
             <Stack spacing={2}>
               <Typography sx={{ p: 1, color: "white" }}>
-                BPM services
+                Web designing and <br /> Maintainence
               </Typography>
               <Typography sx={{ p: 1, color: "white" }}>
-                Web maintainence
+                Content writing
               </Typography>
 
               <Typography sx={{ p: 1, color: "white" }}></Typography>
