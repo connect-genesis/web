@@ -10,6 +10,7 @@ import {
 import { CustomSeconaryButton } from "./Button";
 import { ScheduleAppoinmentDetails } from "./ScheduleInformation";
 import { useScheduleDetailsStore } from "../../store/createScheduleDetailsStore";
+import { useState } from "react";
 
 export const SelectService = (props: {
   disabled: boolean;
@@ -20,7 +21,7 @@ export const SelectService = (props: {
 }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
-  const store = useScheduleDetailsStore();
+  const [selected, setSelected] = useState(0);
 
   return (
     <>
@@ -67,9 +68,13 @@ export const SelectService = (props: {
                     width: "100%",
                     textAlign: "left",
                     p: 5,
-                    border: "1px solid #DBDBDB",
+                    cursor: "pointer",
+                    border: `1px solid ${
+                      selected === 1 ? " #6C38FF" : "#DBDBDB"
+                    }`,
                     borderRadius: 2,
                   }}
+                  onClick={() => setSelected(1)}
                   style={{ marginTop: 20 }}
                 >
                   <Typography> Photography 365 total solutions </Typography>
@@ -80,9 +85,13 @@ export const SelectService = (props: {
                     width: "100%",
                     textAlign: "left",
                     p: 5,
-                    border: "1px solid #DBDBDB",
+                    cursor: "pointer",
                     borderRadius: 2,
+                    border: `1px solid ${
+                      selected === 2 ? " #6C38FF" : "#DBDBDB"
+                    }`,
                   }}
+                  onClick={() => setSelected(2)}
                   style={{ marginTop: 20 }}
                 >
                   <Typography>BPM</Typography>
@@ -93,10 +102,14 @@ export const SelectService = (props: {
                     width: "100%",
                     textAlign: "left",
                     p: 5,
-                    border: "1px solid #DBDBDB",
                     borderRadius: 2,
+                    cursor: "pointer",
+                    border: `1px solid ${
+                      selected === 3 ? " #6C38FF" : "#DBDBDB"
+                    }`,
                   }}
                   style={{ marginTop: 20 }}
+                  onClick={() => setSelected(3)}
                 >
                   <Typography>Web designing and maintainence</Typography>
                 </Box>
@@ -106,10 +119,14 @@ export const SelectService = (props: {
                     width: "100%",
                     textAlign: "left",
                     p: 5,
-                    border: "1px solid #DBDBDB",
+                    border: `1px solid ${
+                      selected === 4 ? " #6C38FF" : "#DBDBDB"
+                    }`,
                     borderRadius: 2,
+                    cursor: "pointer",
                   }}
                   style={{ marginTop: 20 }}
+                  onClick={() => setSelected(4)}
                 >
                   <Typography>Content writing</Typography>
                 </Box>

@@ -195,7 +195,7 @@ export const Header = () => {
         <Divider />
         <List>
           <ListItem key={"Solutions"} disablePadding>
-            <ListItemButton component={Link} to="/">
+            <ListItemButton component={Link} to="/solutions">
               <ListItemText primary={"Solutions"} />
             </ListItemButton>
           </ListItem>

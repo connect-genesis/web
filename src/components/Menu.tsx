@@ -32,7 +32,7 @@ const Menubar: React.FC = () => {
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
         component={Link}
-        to="solutions"
+        to="/solutions"
         style={{ cursor: "pointer" }}
       >
         Solutions

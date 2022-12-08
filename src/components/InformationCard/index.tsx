@@ -2,6 +2,7 @@ import { Box, Typography, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import "./style.css";
+import { useEffect, useState } from "react";
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText("#6C38FF"),
@@ -24,6 +25,20 @@ export const InformationCard = ({
   description: string;
   price: string;
 }) => {
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   return (
     <>
       <Box className="information_card">
@@ -58,7 +73,7 @@ export const InformationCard = ({
           style={{
             background: "#fffefe",
             width: "100%",
-            maxHeight: 300,
+            height: `${isMobile ? "auto" : "300px"}`,
           }}
           src={image}
         ></Box>
