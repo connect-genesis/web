@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import "./style.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText("#6C38FF"),
@@ -41,7 +42,7 @@ export const InformationCard = ({
 
   return (
     <>
-      <Box className="information_card">
+      <Box className="information_card" sx={{height: isMobile ? "auto": 630}}>
         <Typography
           variant="body1"
           gutterBottom
@@ -97,14 +98,16 @@ export const InformationCard = ({
 
  */}
 
-        <ColorButton
-          variant="contained"
-          endIcon={<ArrowRightAltIcon />}
-          sx={{ mt: 5 }}
-          size="medium"
-        >
-          read more
-        </ColorButton>
+        <Box component={Link} to="/solutions">
+          <ColorButton
+            variant="contained"
+            endIcon={<ArrowRightAltIcon />}
+            sx={{ mt: 5 }}
+            size="medium"
+          >
+            read more
+          </ColorButton>
+        </Box>
       </Box>
     </>
   );

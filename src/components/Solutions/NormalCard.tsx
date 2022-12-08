@@ -60,6 +60,7 @@ export const NormalCard = (props: {
                 {props.data.description}
               </Typography>
 
+              {/*
               <Typography
                 variant="body2"
                 style={{ color: "#868585" }}
@@ -67,6 +68,8 @@ export const NormalCard = (props: {
               >
                 {props.data.price}
               </Typography>
+
+*/}
             </Box>
           </Grid>
         </Grid>

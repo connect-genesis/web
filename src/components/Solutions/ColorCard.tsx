@@ -59,6 +59,7 @@ export const ColorCard = (props: {
                 {props.data.description}
               </Typography>
 
+              {/*
               <Typography
                 variant="body2"
                 style={{ color: "#868585" }}
@@ -66,6 +67,8 @@ export const ColorCard = (props: {
               >
                 {props.data.price}
               </Typography>
+
+*/}
             </Box>
           </Grid>
 
